@@ -89,6 +89,7 @@ function Table() {
             let lowsearch = search.toLowerCase();
             data = data.filter(
                 journal =>
+                    journal.id.toString().toLowerCase().includes(lowsearch)||
                     journal.title.toLowerCase().includes(lowsearch) ||
                     journal.country.toLocaleLowerCase().includes(lowsearch)||
                     journal.publisher.toLowerCase().includes(lowsearch)||
